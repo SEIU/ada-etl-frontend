@@ -1,0 +1,226 @@
+/* App.css */
+
+/* Primary color */
+:root {
+  --primary-color: #7e57c2; /* Change this to your desired primary color (purple) */
+}
+
+/* Reset some default browser styles */
+html,
+body,
+div,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Box-sizing */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Global Styles */
+body {
+  background-color: #f0f0f0;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.upload-overview{
+  padding:2%;
+  max-height: 15vh;
+  max-width: 100%;
+}
+
+.sub-menu {
+  background-color: #fff;
+  color: black;
+  border: 1px solid #ccc;
+  position: relative;
+  margin-top: 5px; /* Add some space between the option and the sub-menu */
+}
+
+/* Style for sub-menu headings */
+.sub-menu h3 {
+  font-size: 16px;
+}
+
+/* Style for sub-menu list items */
+.sub-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style for sub-menu list item items on hover */
+.sub-menu li:hover {
+  background-color: #f0f0f0;
+}
+.upload-overview {
+  display: flex;
+  align-items: center; /* Center align text vertically */
+  padding-bottom: 10px; /* Add some spacing at the bottom */
+}
+
+.upload-overview-container {
+  display: flex; /* Make the divs display in a row */
+}
+
+.upload-overview-div {
+  border: 1px solid #ccc;
+  flex: 1; /* Distribute space equally among the divs */
+  height: 5vh; /* Set a height as needed */
+  width:5vw;
+  text-align: center;
+  margin: 0 5px; /* Add some spacing between the divs */
+  margin-left:10vw;
+}
+.record-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5px; /* Add some spacing between the divs */
+  margin-left:3vw;
+  background-color: #f0f0f0;
+}
+
+/* Styles for the "Confirm" button */
+.confirm-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  top : 15%;
+  width: 20%;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  border-right: 5px solid var(--primary-color); 
+
+}
+.dropdown-icon {
+  float: right;
+  margin-right: 10px; /* Adjust the margin as needed */
+  font-size: 14px; /* Adjust the font size as needed */
+  color: #A1A1A1; /* Adjust the color as needed */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10%;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  position: relative; /* Add relative positioning */
+}
+
+.sidebar li:hover {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: var(--primary-color); /* Purple right border on hover */
+  color: var(--primary-color); /* Text color on hover */
+}
+
+/* Apply specific styles to the selected option */
+.sidebar li.selected {
+  border-left-color: red; /* Remove right border for the selected option */
+  background-color: var(--primary-color); /* Purple background for selected option */
+  color: #fff; /* Text color for selected option */
+}
+
+/* Main Container Styles */
+.main-container {
+  width: 85%;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2%;
+  padding-right: 5%;
+  padding-top:2%;
+}
+
+/* Tabs Styles */
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 15%;
+
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  max-width: 15%;
+  height:50%;
+}
+
+.tab.selected {
+  flex-grow: 2;
+  background-color: var(--primary-color);
+  border-right: none;
+  border-left: 1px solid #ccc;
+  cursor: default;
+  color: #fff;
+}
+
+/* Content Styles */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+  max-height: 50%;
+}
+
+.content-text {
+  max-width: 15%;
+  margin: 0 auto;
+}
+
+.headingOverview{
+  margin-top: 10%;
+  text-align: center;
+  padding:5%;
+}
+
+.containerHeader{
+  text-align: Left;
+  padding:2%;
+}
